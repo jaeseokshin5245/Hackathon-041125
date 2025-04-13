@@ -1,0 +1,233 @@
+{
+    "Vegetables": [
+      { "name": "Bell pepper", "image": "images/Bell pepper.jpeg" },
+      { "name": "Broccoli", "image": "images/Broccoli.jpeg" },
+      {"name": "Carrot", "image": "images/Carrot.jpeg"},
+      {
+        "name": "Corn",
+        "image": "images/Corn.jpeg"
+      },
+      {
+        "name": "Cucumber",
+        "image": "images/Cucumber.jpeg"
+      },
+      {
+        "name": "Garlic",
+        "image": "images/Garlic.jpeg"
+      },
+      {
+        "name": "Lettuce",
+        "image": "images/Lettuce.jpeg"
+      },
+      {
+        "name": "Mushroom",
+        "image": "images/Mushroom.jpeg"
+      },
+      {
+        "name": "Onion",
+        "image": "images/Onion.jpeg"
+      },
+      {
+        "name": "Potato",
+        "image": "images/Potato.jpeg"
+      },
+      {
+        "name": "Scallion",
+        "image": "images/Scallion.jpeg"
+      },
+      {
+        "name": "Spinach",
+        "image": "images/Spinach.jpeg"
+      },
+      {
+        "name": "Tomato",
+        "image": "images/Tomato.jpeg"
+      },
+      {
+        "name": "Zucchini",
+        "image": "images/Zucchini.jpeg"
+      }
+    ],
+"Meat": [
+    {
+        "name": "Bacon",
+        "image": "images/Bacon.jpeg"
+      },
+      {
+        "name": "Beef",
+        "image": "images/Beef.jpeg"
+      },
+      {
+        "name": "Chicken",
+        "image": "images/Chicken.jpeg"
+      },
+      {
+        "name": "Pork",
+        "image": "images/Pork.jpeg"
+      },
+      {
+        "name": "Shrimp",
+        "image": "images/Shrimp.jpeg"
+      },
+      {
+        "name": "Turkey",
+        "image": "images/Turkey.jpeg"
+      }
+    ],
+
+"Proteins": [
+{
+    "name": "Bean",
+    "image": "images/Bean.jpeg"
+  },
+  {
+    "name": "Egg",
+    "image": "images/Egg.jpeg"
+  },
+  {
+    "name": "Tofu",
+    "image": "images/Tofu.jpeg"
+  }
+],
+
+"Dairy": [
+    {
+        "name": "Cheese",
+        "image": "images/Cheese.jpeg"
+      },
+      {
+        "name": "Milk",
+        "image": "images/Milk.jpeg"
+      },
+      {
+        "name": "Yogurt",
+        "image": "images/Yogurt.jpeg"
+      }
+],
+"Carbs": [
+    {
+        "name": "Bread",
+        "image": "images/Bread.jpeg"
+      },
+      {
+        "name": "Flour",
+        "image": "images/Flour.jpeg"
+      },
+      {
+        "name": "Oats",
+        "image": "images/Oats.jpeg"
+      },
+      {
+        "name": "Pasta noodle",
+        "image": "images/Pasta noodle.jpeg"
+      },
+      {
+        "name": "Rice",
+        "image": "images/Rice.jpeg"
+      }
+],
+"Fruits": [
+    {
+        "name": "Apple",
+        "image": "images/Apple.jpeg"
+      },
+      {
+        "name": "Avocado",
+        "image": "images/Avocado.jpeg"
+      },
+      {
+        "name": "Lemon",
+        "image": "images/Lemon.jpeg"
+      },
+      {
+        "name": "Lime",
+        "image": "images/Lime.jpeg"
+      }
+],
+"Sweeteners": [
+    {
+        "name": "Honey",
+        "image": "images/Honey.jpeg"
+      },
+      {
+        "name": "Sugar",
+        "image": "images/Sugar.jpeg"
+      }
+],
+"Fats/Oils": [
+    {
+        "name": "Butter",
+        "image": "images/Butter.jpeg"
+      },
+      {
+        "name": "Olive oil",
+        "image": "images/Olive oil.jpeg"
+      }
+],
+"Nuts/Seeds": [
+    {
+        "name": "Almond",
+        "image": "images/Almond.jpeg"
+      },
+      {
+        "name": "Coconut",
+        "image": "images/Coconut.jpeg"
+      },
+      {
+        "name": "Peanut",
+        "image": "images/Peanut.jpeg"
+      },
+      {
+        "name": "Walnut",
+        "image": "images/Walnut.jpeg"
+      }
+],
+"Spices/Herbs": [
+    {
+        "name": "Basil",
+        "image": "images/Basil.jpeg"
+      },
+      {
+        "name": "Cilantro",
+        "image": "images/Cilantro.jpeg"
+      },
+      {
+        "name": "Cumin",
+        "image": "images/Cumin.jpeg"
+      },
+      {
+        "name": "Ginger",
+        "image": "images/Ginger.jpeg"
+      },
+      {
+        "name": "Parsley",
+        "image": "images/Parsley.jpeg"
+      }
+],
+"Condiments": [
+    {
+        "name": "Jalapeno hot sauce",
+        "image": "images/Jalapeno hot sauce.jpeg"
+      },
+      {
+        "name": "Pepper",
+        "image": "images/Pepper.jpeg"
+      },
+      {
+        "name": "Salt",
+        "image": "images/Salt.jpeg"
+      },
+      {
+        "name": "Soy sauce",
+        "image": "images/Soy sauce.jpeg"
+      },
+      {
+        "name": "Tomato sauce",
+        "image": "images/Tomato sauce.jpeg"
+      },
+      {
+        "name": "Vinegar",
+        "image": "images/Vinegar.jpeg"
+      }
+]
+}

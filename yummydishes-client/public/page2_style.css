@@ -1,0 +1,225 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 1280px;
+    height: 720px;
+    font-family: sans-serif;
+    background: white;
+}
+
+.header-space {
+    height: 90px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 15px;
+}
+
+.heart-icon {
+    margin-left: 20px;
+    font-size: 2.5em;
+    color: #2A343D;
+}
+
+
+.footer-space {
+    height: 80px;
+    background: white;
+}
+
+.footer-space {
+    background: white;
+    display: flex;
+    justify-content: center; 
+    align-items: center;  
+    font-size: 14px;
+    color: #777;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-buttons {
+    display: flex;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    color: #333;
+    font-size: 24px; 
+    margin-right: 30px; 
+    transition: color 0.3s;
+}
+
+.nav-buttons a:hover {
+    color: #ff6b6b; 
+}
+
+
+main {
+    background: rgba(128, 0, 32, 1); 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px; 
+    min-height: calc(720px - 90px - 80px);
+    height: auto;
+}
+
+.cart-icon {
+    font-size: 28px;
+    color: #BE6C6E;
+    cursor: pointer;
+    margin-right: 900px;
+    text-align: right;
+  }
+  
+.cart-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+.cart-modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+  }
+  
+.close-button {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+button {
+    background-color: #BE6C6E;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+
+#selected-ingredients-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+  
+.content-wrapper {
+    display: flex;
+}
+
+.CategoriesTitle {
+    background-color: #BE6C6E; /* 背景顏色 */
+    color:#FFFFFF;
+    width: 104px;
+    height: 27px;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 陰影 */
+    margin-right: 1100px;
+    margin-bottom: -30px;
+    position: relative;
+    z-index: 1000;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.categoryList {
+    background-color: #FFFFFF; /* 標題背景顏色 */
+    color:#FFFFFF;
+    margin-right: 1100px; 
+    margin-top: 10px;
+    width: 142px;
+    height: 411px;
+}
+
+.categoryList-item {
+    display: block; /* 讓連結佔據整行 */
+    text-decoration: none; /* 移除底線 */
+    margin-left: 16px;
+    width: 109px;
+    height: 20px;
+    font-size: 16px;
+    color: #FFFFFF; /* 文字顏色 */
+    background-color: #BE6C6E; /* 背景顏色 */
+    margin-bottom: 10px;
+    text-align: center; /* 文字置中 */
+}
+
+.categoryList-item:hover {
+    background-color: #e0e0e0; /* 滑鼠懸停時的背景顏色 */
+}
+.ingredients-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 300px;
+    margin-top: -400px;
+    gap: 70px;
+    margin-bottom: 130px;
+}
+
+.ingredient-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+}
+
+.ingredient-item {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.image-placeholder {
+    width: 200px;
+    height: 150px;
+    background-color: #eee;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.ingredient-name {
+    font-weight: 500px;
+    color: #333;
+}
+.ingredient-button {
+    background-color: #BE6C6E;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .ingredient-button:hover {
+    background-color: #9c5a5c;
+  }

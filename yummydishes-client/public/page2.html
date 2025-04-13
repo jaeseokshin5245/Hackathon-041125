@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YummyDishes</title>
+    <link rel="stylesheet" href="page2_style.css">
+</head>
+
+<body>
+    <div class = "header-space">
+
+        <span class = "heart-icon">&#x2764</span>
+
+        <nav class = "nav-buttons">
+            <a href="main_page.html">Home</a>
+            <a href="page2.html">Ingredients</a>
+            <a href="">Contact</a>
+        </nav>
+    </div>
+    <main>
+        <div class="cart-icon" onclick="toggleCartModal()">&#128722;</div>
+        <div id="cart-modal" class="cart-modal">
+            <div class="cart-modal-content">
+                <span class="close-button" onclick="toggleCartModal()">&times;</span>
+                <h2>Selected Ingredients</h2>
+                <ul id="cart-items-list"></ul>
+                <p>Are you sure about these ingredients?</p>
+                <button onclick="confirmIngredients()">Confirm</button>
+            </div>
+        </div>
+                <div class="CategoriesTitle">
+            <h2>Categories</h2>
+        </div>
+        <div class="categoryList">
+            <h2>Space
+            <a href="#" class="categoryList-item">Vegetables</a>
+            <a href="#" class="categoryList-item">Meat</a>
+            <a href="#" class="categoryList-item">Proteins</a>
+            <a href="#" class="categoryList-item">Dairy</a>
+            <a href="#" class="categoryList-item">Carbs</a>
+            <a href="#" class="categoryList-item">Fruits</a>
+            <a href="#" class="categoryList-item">Sweeteners</a>
+            <a href="#" class="categoryList-item">Fats/Oils</a>
+            <a href="#" class="categoryList-item">Nuts/Seeds</a>
+            <a href="#" class="categoryList-item">Spices/Herbs</a>
+            <a href="#" class="categoryList-item">Condiments</a>
+        </div>
+        <div class="content-wrapper">
+            <section class="ingredients-grid">
+            </section>
+        </div>
+
+        <script>
+            const selectedIngredients = [];
+        
+           
+            function toggleCartModal() {
+              const modal = document.getElementById("cart-modal");
+              const list = document.getElementById("cart-items-list");
+              list.innerHTML = ""; 
+        
+              selectedIngredients.forEach((ingredient) => {
+                const li = document.createElement("li");
+                li.textContent = ingredient;
+                list.appendChild(li);
+              });
+        
+              modal.style.display = modal.style.display === "block" ? "none" : "block";
+            }
+        
+            
+            fetch("ingredients.json")
+              .then((response) => {
+                if (!response.ok) {
+                  throw new Error("JSON file failed to load!");
+                }
+                return response.json();
+              })
+              .then((data) => {
+                const ingredientsGrid = document.querySelector(".ingredients-grid");
+                ingredientsGrid.innerHTML = "";
+        
+                data.forEach((item) => {
+                  const itemHTML = `
+                    <div class="ingredient-item">
+                      <div class="image-placeholder">
+                        <img src="${item.image}" alt="${item.name}" class="ingredient-img">
+                      </div>
+                      <button class="ingredient-button" data-ingredient="${item.name}">${item.name}</button>
+                    </div>
+                  `;
+                  ingredientsGrid.insertAdjacentHTML("beforeend", itemHTML);
+                });
+        
+               
+                document.querySelectorAll(".ingredient-button").forEach((button) => {
+                  button.addEventListener("click", () => {
+                    const ingredient = button.dataset.ingredient;
+                    if (!selectedIngredients.includes(ingredient)) {
+                      selectedIngredients.push(ingredient);
+                      alert(ingredient + " added to cart!");
+                    }
+                  });
+                });
+              })
+              .catch((error) => {
+                console.error("Fetch error:", error);
+              });
+         </script>
+
+<script>
+  let allData = {}; 
+
+  fetch('ingredients_category.json')
+    .then(response => response.json())
+    .then(data => {
+      allData = data;
+      renderCategory("Vegetables"); 
+    });
+
+    function renderCategory(categoryName) {
+    const ingredientsGrid = document.querySelector('.ingredients-grid');
+    ingredientsGrid.innerHTML = '';
+
+    const items = allData[categoryName] || [];
+    items.forEach(item => {
+        const itemHTML = `
+            <div class="ingredient-item">
+                <div class="image-placeholder">
+                    <img src="${item.image}" alt="${item.name}" class="ingredient-img">
+                </div>
+                <button class="ingredient-button" data-ingredient="${item.name}">${item.name}</button>
+            </div>
+        `;
+        ingredientsGrid.insertAdjacentHTML('beforeend', itemHTML);
+    });
+
+
+    document.querySelectorAll('.ingredient-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const ingredient = button.dataset.ingredient;
+            if (!selectedIngredients.includes(ingredient)) {
+                selectedIngredients.push(ingredient);
+                alert(ingredient + " added to cart!");
+            }
+        });
+    });
+}
+
+
+function toggleCartModal() {
+    const modal = document.getElementById("cart-modal");
+    const list = document.getElementById("cart-items-list");
+    list.innerHTML = "";
+
+    selectedIngredients.forEach(ingredient => {
+        const li = document.createElement("li");
+        li.textContent = ingredient;
+        list.appendChild(li);
+    });
+
+    modal.style.display = modal.style.display === "block" ? "none" : "block";
+}
+
+
+async function confirmIngredients() {
+    if (selectedIngredients.length === 0) {
+        alert("Please select at least one ingredient.");
+        return;
+    }
+
+    // 서버에 선택된 재료 전송 시도
+    const data = { ingredients: selectedIngredients };
+    
+    try {
+        // 1. 주소 오타 수정 (예시로 localhost 사용)
+        const response = await fetch('http://172.19.237.249:3001/food', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+        });
+
+        if (!response.ok) {
+            throw new Error("Server error");
+        }
+
+        // 2. 서버 응답 처리
+        const result = await response.json();
+        sessionStorage.setItem('foodData', JSON.stringify(result));
+        
+    } catch (error) {
+        console.error("Error:", error);
+        // 서버 통신 실패 시에도 기본 데이터 저장
+        sessionStorage.setItem('foodData', JSON.stringify({
+            ingredients: selectedIngredients,
+            recipes: [] // 또는 기본 레시피 데이터
+        }));
+    }
+    
+    // 3. 무조건 페이지 이동 (서버 통신 성공/실패 관계없이)
+    window.location.href = 'page3.html';
+}
+
+  document.querySelectorAll('.categoryList-item').forEach(button => {
+    button.addEventListener('click', event => {
+      event.preventDefault();
+      const categoryText = button.textContent.trim();
+      renderCategory(categoryText);
+
+      document.querySelectorAll('.categoryList-item').forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+    });
+  });
+</script>
+            
+    </main>
+    <footer class = "footer-space">
+        ⓒ 2025 YummyDishes. All rights reserved.
+    </footer>
+</body>
+</html>
