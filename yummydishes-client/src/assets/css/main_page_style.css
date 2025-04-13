@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 1280px;
+    height: 720px;
+    font-family: sans-serif;
+}
+
+.header-space {
+    height: 90px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 15px;
+}
+
+.heart-icon {
+    margin-left: 20px;
+    font-size: 2.5em;
+    color: #2A343D;
+}
+
+.nav-buttons {
+    display: flex;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    color: #333;
+    font-size: 24px; 
+    margin-right: 30px; 
+    transition: color 0.3s;
+}
+
+.nav-buttons a:hover {
+    color: #ff6b6b; 
+}
+
+.main_content {
+    height: 550px;
+    background:
+        linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
+        url('../images/MainPagePic.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}   
+
+.footer-space {
+    height: 80px;
+    background: white;
+}
+
+.main_content h1 {
+    font-size: 72px;
+    color: #333;
+    margin-top: 150px;
+}
+
+.main_content p {
+    font-size: 32px;
+    color: #555;
+    margin-top: 0px;
+}
+
+.footer-space {
+    background: white;
+    display: flex;
+    justify-content: center; 
+    align-items: center;  
+    font-size: 14px;
+    color: #777;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.guide-button {
+    display: inline-block;
+    margin-top: 30px;                 
+    padding: 15px 40px;                
+    background-color: #ff6b6b;        
+    color: white;                   
+    font-size: 24px;                 
+    font-weight: bold;
+    text-decoration: none;           
+    border-radius: 30px;       
+    transition: background-color 0.3s; 
+}
+
+.guide-button:hover {
+    background-color: #ff5252;        
+    transform: scale(1.05);           
+}

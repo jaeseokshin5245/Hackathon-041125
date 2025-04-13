@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/logo.svg'; // make sure your SVG is placed in src/assets/
+import logo from '../assets/images/logo.svg'; // make sure your SVG is placed in src/assets/
 
 const Header = () => {
   return (
@@ -18,7 +18,7 @@ const Header = () => {
 
 const styles = {
   header: {
-    backgroundColor: '#fff',
+    backgroundColor: '#FFF',
     padding: '0 20px',
     display: 'flex',
     alignItems: 'center',

@@ -1,0 +1,78 @@
+{
+    "Vegetables": [
+      "Bell pepper",
+      "Broccoli",
+      "Carrot",
+      "Corn",
+      "Cucumber",
+      "Garlic",
+      "Lettuce",
+      "Mushroom",
+      "Onion",
+      "Potato",
+      "Scallion",
+      "Spinach",
+      "Tomato",
+      "Zucchini"
+    ],
+    "Meat": [
+      "Bacon",
+      "Beef",
+      "Chicken",
+      "Pork",
+      "Shrimp",
+      "Turkey"
+    ],
+    "Proteins": [
+      "Bean",
+      "Egg",
+      "Tofu"
+    ],
+    "Dairy": [
+      "Cheese",
+      "Milk",
+      "Yogurt"
+    ],
+    "Carbs": [
+      "Bread",
+      "Flour",
+      "Oats",
+      "Pasta noodle",
+      "Rice"
+    ],
+    "Fruits": [
+      "Apple",
+      "Avocado",
+      "Lemon",
+      "Lime"
+    ],
+    "Sweeteners": [
+      "Honey",
+      "Sugar"
+    ],
+    "Fats/Oils": [
+      "Butter",
+      "Olive oil"
+    ],
+    "Nuts/Seeds": [
+      "Almond",
+      "Coconut",
+      "Peanut",
+      "Walnut"
+    ],
+    "Spices/Herbs": [
+      "Basil",
+      "Cilantro",
+      "Cumin",
+      "Ginger",
+      "Parsley"
+    ],
+    "Condiments": [
+      "Jalapeno hot sauce",
+      "Pepper",
+      "Salt",
+      "Soy sauce",
+      "Tomato sauce",
+      "Vinegar"
+    ]
+  }
